@@ -16,7 +16,7 @@ class VehicleRent ():
         print(f"{self.stock} vehicle available to rent")
         return self.stock
 
-    def renthourly(self, n):
+    def rentHourly(self, n):
         """
             rent hourly
         """
@@ -25,7 +25,7 @@ class VehicleRent ():
             return None
 
         elif n > self.stock:
-            print(f"Sorry, {self.stock} vehicle avaible to rent.")
+            print(f"Sorry, {self.stock} vehicle available to rent.")
             return None
 
         else:
@@ -34,7 +34,7 @@ class VehicleRent ():
             self.stock -= n
             return self.now
 
-    def rentdaily(self, n):
+    def rentDaily(self, n):
         """
             rent daily
         """
@@ -43,7 +43,7 @@ class VehicleRent ():
             return None
 
         elif n > self.stock:
-            print(f"Sorry, {self.stock} vehicle avaible to rent.")
+            print(f"Sorry, {self.stock} vehicle available to rent.")
             return None
 
         else:
@@ -80,7 +80,7 @@ class VehicleRent ():
                     print("You have extra 20% discount")
                     bill = bill * 0.8
                 print("Thank you for returning your car")
-                print(f"Price: ${self.bill}")
+                print(f"Price: ${bill}")
                 return bill
 
         elif brand == "bike":
@@ -99,7 +99,7 @@ class VehicleRent ():
                     print("You have extra 20% discount")
                     bill = bill * 0.8
                 print("Thank you for returning your bike")
-                print(f"Price: ${self.bill}")
+                print(f"Price: ${bill}")
                 return bill
 
         else:
@@ -133,7 +133,7 @@ class Customer:
 
     def requestVehicle(self, brand):
         if brand == "bike":
-            bikes = input("How many bikes would you like to rent?")
+            bikes = input("How many bikes would you like to rent? ")
             try:
                 bikes = int(bikes)
             except ValueError:
@@ -148,7 +148,7 @@ class Customer:
             return self.bikes
 
         elif brand == "car":
-            cars = input("How many cars would you like to rent?")
+            cars = input("How many cars would you like to rent? ")
             try:
                 cars = int(cars)
             except ValueError:
@@ -169,7 +169,7 @@ class Customer:
              if self.rentalTime_b and self.rentalBasis_b and self.bikes:
                  return self.rentalTime_b, self.rentalBasis_b,  self.bikes
              else:
-                 return 0, 0 , 0
+                 return 0, 0, 0
 
          elif brand == "car":
             if self.rentalTime_c and self.rentalBasis_c and self.cars:
